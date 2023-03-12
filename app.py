@@ -12,7 +12,7 @@ client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
 sp = spotipy.Spotify(auth_manager=spotipy.SpotifyOAuth(
     client_id='74f3dd6a119c4711b8e141ff02303dde',
     client_secret='36dc856cff2d46b3a3a920f6a80665c5',
-    redirect_uri='http://www.localhost/'))
+    """redirect_uri='http://www.localhost/'"""))
 try:
     sp.current_user()
 except spotipy.SpotifyException as e:
@@ -99,6 +99,6 @@ def recommendations():
         track_list.append(f"{track['name']} by {track['artists'][0]['name']}")
     print(track_list)
     return render_template('index.html', track_list=track_list)
-if __name__ == '__main__':
-    server.run(debug=False, port=80)
+"""if __name__ == '__main__':
+    server.run(debug=False, port=80)"""
 
