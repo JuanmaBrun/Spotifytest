@@ -27,14 +27,7 @@ headers = {
     'Authorization': 'Bearer ' + token['access_token']
 }
 # Define route for index page
-@server.route('/')
-def index():
-    print('Hola')
-    return render_template('index.html')
-# Define route for recommendations page
-@server.route('/recommendations', methods=['POST'])
-def recommendations():
-    print('jeje')
+
     # Set up query parameters
 
     # Search for an artist
