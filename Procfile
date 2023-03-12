@@ -1,1 +1,1 @@
-web : gunicorn appflask:server
+web: node index.js

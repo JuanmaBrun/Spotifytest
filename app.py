@@ -3,7 +3,7 @@ import requests
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 # Flask
-server = Flask(__name__)
+app = Flask(__name__)
 # Set up credentials
 client_id = '74f3dd6a119c4711b8e141ff02303dde'
 client_secret = '36dc856cff2d46b3a3a920f6a80665c5'
@@ -92,6 +92,6 @@ headers = {
         track_list.append(f"{track['name']} by {track['artists'][0]['name']}")
     print(track_list)
     return render_template('index.html', track_list=track_list)
-"""if __name__ == '__main__':
-    server.run(debug=False, port=80)"""
+if __name__ == '__main__':
+    app.run(debug=False, port=80)
 
