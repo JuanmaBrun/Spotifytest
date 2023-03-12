@@ -12,7 +12,7 @@ client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
 sp = spotipy.Spotify(auth_manager=spotipy.SpotifyOAuth(
     client_id='74f3dd6a119c4711b8e141ff02303dde',
     client_secret='36dc856cff2d46b3a3a920f6a80665c5',
-    """redirect_uri='http://www.localhost/'"""))
+    redirect_uri='https://spotifytest.herokuapp.com/'))
 try:
     sp.current_user()
 except spotipy.SpotifyException as e:
